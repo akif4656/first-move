@@ -1,26 +1,289 @@
+
+/* ===== General Body ===== */
 body {
+  background-color: #1a1a1a;
+  color: white;
+  margin: 0 auto;
   font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f5f5f5;
-  margin: 0;
+  /* Setting a maximum width for the entire page content */
+  max-width: 1920px; 
 }
 
-nav {
-  background: #007acc;
-  padding: 15px;
+/* ===== Navbar (Header) ===== */
+.main-header {
+  position: absolute;
+  top: 23px;
+  left: 71px;
+  width: 1773px;
+  height: 59px;
+  transform: rotate(0deg);
+  opacity: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  z-index: 100;
 }
 
-nav a {
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
   color: white;
   text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #facc15;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.right-side {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
-section {
-  padding: 50px;
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #22c55e;
+  padding: 8px 15px;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.whatsapp-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.whatsapp-btn:hover {
+  background-color: #16a34a;
+}
+
+.language-dropdown {
+  position: relative;
+  color: white;
+}
+
+.language-btn {
+  font-weight: 600;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
+.language-btn:hover {
+  color: #facc15;
+}
+
+.language-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  min-width: 100px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.language-menu a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.language-menu a:hover {
+  background-color: #f3f4f6;
+}
+
+/* ===== Hero Section (Main Header) ===== */
+.hero-section {
+  position: relative;
+  width: 1920px; /* optional, usually 100% better */
+  height: 100vh;
+  min-height: 969px;
+
+  background-image: url('../images/header-images/header-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform: rotate(0deg);
+  opacity: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.desktop-br {
+  display: none;
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #e5e7eb;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Take Counsel Button */
+.take-counsel-btn {
+  margin-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #facc15;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+  text-transform: uppercase;
+}
+
+.take-counsel-btn:hover {
+  background-color: #eab308;
+}
+
+.take-counsel-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.take-counsel-icon svg {
+    width: 10px;
+    height: 10px;
+}
+
+/* Down Arrow */
+.down-arrow {
+  margin-top: 40px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: bounce 2s infinite;
+}
+
+.down-arrow svg {
+    transform: rotate(90deg);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .desktop-br {
+    display: inline;
+  }
+}
+
+/* Mobile Overrides */
+@media (max-width: 767px) {
+    .main-header {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        padding: 0 20px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .logo-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .right-side {
+        gap: 8px;
+    }
+
+    .whatsapp-btn {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .language-btn {
+        font-size: 0.8rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-section {
+        min-height: 100vh;
+    }
 }
