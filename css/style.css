@@ -5,7 +5,7 @@ body {
   color: white;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  /* Setting a maximum width for the entire page content */
+ 
   max-width: 1920px; 
 }
 
@@ -123,10 +123,10 @@ body {
   background-color: #f3f4f6;
 }
 
-/* ===== Hero Section (Main Header) ===== */
+
 .hero-section {
   position: relative;
-  width: 1920px; /* optional, usually 100% better */
+  width: 1920px;
   height: 100vh;
   min-height: 969px;
 
@@ -234,56 +234,3 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-/* ===== Responsive ===== */
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 4rem;
-  }
-
-  .desktop-br {
-    display: inline;
-  }
-}
-
-/* Mobile Overrides */
-@media (max-width: 767px) {
-    .main-header {
-        position: fixed; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px;
-        padding: 0 20px;
-        background: rgba(0, 0, 0, 0.7);
-    }
-    
-    .logo-img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .right-side {
-        gap: 8px;
-    }
-
-    .whatsapp-btn {
-        font-size: 0.8rem;
-        padding: 6px 10px;
-    }
-
-    .language-btn {
-        font-size: 0.8rem;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-section {
-        min-height: 100vh;
-    }
-}
