@@ -9,8 +9,6 @@
 }
 
 body {
-
-  background-color: #1a1a1a;
   color: white;
   font-family: Arial, sans-serif;
   position: relative;
@@ -349,40 +347,6 @@ body {
   object-fit: contain;
   display: block;
 }
-
-/* badge on image
-.img-badge {
-  position: absolute;
-  bottom: 10px;
-  left: 50px;
-  background: #CAA05C;
-  color: #fff;
-  padding: 0px 70px;
-  border-radius: 10px;
-  font-weight: 600;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
- 
-}
-
-.img-badge span:first-child {
-  font-size: 90px;
-  margin-left:-70px;
-  color: #FFFFFF;
-}
-
-.img-badge span:last-child {
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 2px;
-}
-
-
-*/
 .img-badge {
   position: absolute;
   bottom: 10px;
@@ -417,23 +381,8 @@ body {
   line-height: 1;
   letter-spacing: 0;       /* নিচের দিকে ঠেলবে */
   text-align: left;
-  align-self: flex-end;   /* ডান দিক align */
+  align-self: flex-end;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* section right content */
 .Trusted-section {
   width: 40%;
   color: #222;
@@ -679,81 +628,112 @@ h1 span {
     .down-arrow {
         display: none; 
     }
+    .Trusted-wrapper {
+        /* মূল সেকশন উল্লম্বভাবে সাজানো হবে */
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    /* === বাম দিকের ইমেজ/রাপার সেকশন (ছবি) === */
+    .wrapper {
+        width: 100%;
+        height: 380px; /* উচ্চতা আরেকটু বাড়ানো হলো */
+        margin-right: 0;
+        margin-bottom: 40px; /* নিচে ফাঁকা জায়গা বাড়ানো */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ছবির পজিশন এবং সাইজ ঠিক করা */
+    .img1 {
+        width: 65%; /* সামান্য বাড়ানো */
+        height: 60%;
+        top: 0;
+        left: 0;
+    }
+
+    .img2 {
+        width: 75%; /* সামান্য বাড়ানো */
+        height: 85%;
+        right: -5px;
+        top: 80px; /* সামান্য নিচে নামানো */
+    }
+    
+    /* অভিজ্ঞতা ব্যাজ পজিশন এবং সাইজ ঠিক করা */
+    .img-badge {
+        bottom: 0px;
+        left: 30%;
+        transform: translateX(-50%); /* মাঝখানে আনা */
+        width: 170px; /* প্রস্থ কমানো */
+        padding: 10px 15px; /* প্যাডিং সামঞ্জস্য করা */
+    }
+
+    .img-badge1 {
+        font-size: 70px; /* ছবির সাথে মিল রেখে ফন্ট সাইজ সামঞ্জস্য */
+        line-height: 1;
+        align-self: flex-start;
+    }
+
+    .img-badge2 {
+        font-size: 18px;
+        line-height: 1.2;
+        align-self: flex-end;
+    }
+
+    /* ছবির ভেতরের ইমেজ যেন contain না হয়ে cover হয় */
+    .img1 img,
+    .img2 img {
+        object-fit: cover; /* ছবির আকারের সাথে ছবির আউটপুট আরও মিলবে */
+    }
+
+    /* === ডান দিকের টেক্সট সেকশন === */
+    .Trusted-section {
+        width: 100%;
+        margin-left: 0;
+        text-align: left; /* পুরো সেকশনটি বাম দিকে রাখা */
+    }
+
+    /* ব্যাজকে বাম দিকে রাখা (টেক্সট সেকশনের শুরুতে) */
+    .Trusted-section .badge {
+        margin: 0 0 15px 0;
+        display: inline-flex;
+    }
+    
+    h1 {
+        font-size: 34px; /* হেডলাইন ফন্ট সাইজ বাড়ানো */
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .desc {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    /* ইনফো বক্সগুলোকে উপরে-নিচে সাজানো */
+    .info-boxes {
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    /* বাটনকে বাম দিকে রাখা */
+    .btn {
+        margin: 0;
+        justify-content: space-between;
+        width: 220px; /* প্রস্থ আরেকটু বাড়ানো হলো */
+        gap: 10px;
+        padding: 8px 15px;
+        font-size: 16px;
+    }
 }
-@media (max-width: 992px) {
-  .Trusted-wrapper {
-    flex-direction: column; 
-    align-items: center;
-    padding: 40px 20px;
-  }
 
-  .wrapper {
-    width: 100%;
-    height: 350px;
-  }
-
-  .Trusted-section {
-    width: 100%;
-    max-width: 700px;
-  }
-  .wrapper {
-    width: 100%;          
-    max-width: 500px;      
-    height: 400px;         
-    margin: 0 auto;
-    position: relative;        
-  }
-
-  .img1 {
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: 60%;
-    padding-right: 20px;
-  }
-
-  .img2 {
-    right: -40px;
-    top: 90px;
-    width: 85%;
-    height: 75%;
-    padding-right: 20px;
-  }
-
-  .img-badge {
-  position: absolute;
-  bottom: 70px;  
-  left: 20px;
-  padding: 5px 65px;
-}
+ 
 
 
-  .img-badge span:first-child {
-    font-size: 90px;
-  }
 
-
-  .img-badge {
-    padding:0px 50px;         
-    width: 150px;          
-    height: auto;          
-    display: flex;         
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .img-badge span:first-child {
-    font-size: 48px;       
-    margin-left: -80px;        
-  }
-
-  .img-badge span:last-child {
-    font-size: 16px;       
-    margin-top: 2px;       
-  }
-}
-  
+ 
 
 
 
