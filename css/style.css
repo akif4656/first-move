@@ -128,13 +128,7 @@ body {
   border-radius: 8px;
   min-width: 100px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  z-index: 200;
 }
-
-.language-menu.show {
-  display: block;
-}
-
 
 .language-menu a {
   display: block;
@@ -281,16 +275,41 @@ body {
 
 
 /* --- Solutions Section Styles --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Solutions Section Styles --- */
+/* ===== Experience Section Styles (Final Match to Image) ===== */
+
+/* Color and Font Variables */
+
+
+
+/* ==== Trusted Wrapper – Fixed Size, Scrollable ==== */
 .Trusted-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* ডিফল্টভাবে gap থাকবে */
   background-color: #FFFEF9;
   padding: 50px 20px;
 }
-
 
 /* Wrapper – fixed size, always same look */
 .wrapper {
@@ -452,24 +471,61 @@ h1 span {
 
 
 
+.partners-wrapper {
+    background-color:#B79B63;
+;
+ 
+    padding: 30px 140px; 
+    margin: 40px;
+    border-radius: 20px;
+}
+
+.partners-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.partners-text {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    white-space: nowrap; 
+}
+
+.vertical-divider {
+    width: 2px;
+    height: 80px;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 0 30px;
+    flex-shrink: 0; /* লাইনটা সঙ্কুচিত হতে দিচ্ছে না */
+}
 
 
 
 
+.partners-logos {
+    display: flex;
+    align-items: center;
+    justify-content:space-around; 
+    width: 100%; 
+    gap: 40px; 
+    margin-right:-40px;
+  
+}
 
-
-
-
-
-
-
-
-
-/* --- Solutions Section Styles --- */
-/* ===== Experience Section Styles (Final Match to Image) ===== */
-
-/* Color and Font Variables */
-
+.partners-logos img {
+    max-height: 50px; 
+    width: auto;
+    object-fit: contain;
+   
+    
+}
+.dot-container {
+    display: none;
+}
 
 
 
@@ -593,24 +649,86 @@ h1 span {
     .down-arrow {
         display: none; 
     }
-
-  .Trusted-wrapper {
-   /* adjust this value as needed */
-    align-items: flex-start; /* align content from left inside the pushed wrapper */
-  }
-}
- 
+    .Trusted-wrapper {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
     
+  
+    /* B. Partners Section Mobile Styles (Single Logo Slide) */
+      .partners-wrapper {
+       background-color: #A98E64;
+       padding: 40px 20px 60px;
+       text-align: center; 
+      }
+   .partners-content {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
+    width: 100%;
+ }
+ .partners-text {
+    font-size: 28px; 
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    white-space: normal;
+ }
+ .vertical-divider {
+    display: none; 
+ }
+
+ .partners-carousel-container {
+    width: 100%; 
+    max-width: 200px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    height: 60px; 
+ }
+ .partners-logos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    gap: 0; 
+    width: 500%; 
+    flex-wrap: nowrap;
+    transform: translateX(0); 
+    transition: transform 0.5s ease-in-out;
+ }
+
+ .partners-logos img {
+    min-width: 20%; 
+    width: 20%;
+    max-height: 40px; 
+    box-sizing: border-box; 
+    padding: 0 10px; 
+    object-fit: contain;
+ }
+ .dot-container {
+    display: flex; 
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+ }
+ .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 0.5;
+    border-radius: 50%;
+    cursor: pointer;
+ }
+   .dot.active {
+    opacity: 1; 
+ }
 
 
-
-
+ 
+}
 
 @media (max-width: 1023px) {
-   .Trusted-wrapper {
-    gap: 0;  /* mobile এ gap remove করলাম */
-    flex-direction: column; /* যদি mobile এ vertical করতে চাও */
-  }
     .wrapper {
     width: 80%;
     height: 380px;
@@ -664,7 +782,89 @@ h1 span {
     padding: 8px 15px;
     font-size: 16px;
   }
+
+
+      .partners-wrapper {
+       background-color: #A98E64;
+       padding: 40px 20px 60px;
+       text-align: center; 
+      }
+   .partners-content {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
+    width: 100%;
+ }
+ .partners-text {
+    font-size: 28px; 
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    white-space: normal;
+ }
+ .vertical-divider {
+    display: none; 
+ }
+
+ .partners-carousel-container {
+    width: 100%; 
+    max-width: 200px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    height: 60px; 
+ }
+ .partners-logos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    gap: 0; 
+    width: 500%; 
+    flex-wrap: nowrap;
+    transform: translateX(0); 
+    transition: transform 0.5s ease-in-out;
+ }
+
+ .partners-logos img {
+    min-width: 20%; 
+    width: 20%;
+    max-height: 40px; 
+    box-sizing: border-box; 
+    padding: 0 10px; 
+    object-fit: contain;
+ }
+ .dot-container {
+    display: flex; 
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+ }
+ .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 0.5;
+    border-radius: 50%;
+    cursor: pointer;
+ }
+   .dot.active {
+    opacity: 1; 
+ }
+
+
+
 }
+
+@media (min-width: 768px) {
+  .Trusted-wrapper {
+    margin-left: 220px; /* adjust this value as needed */
+    align-items: flex-start;
+    gap: 20px; /* align content from left inside the pushed wrapper */
+  }
+}
+
+
 
 
 
