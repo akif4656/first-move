@@ -44,12 +44,19 @@
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp" class="whatsapp-icon"> WhatsApp
       </a>
       <div class="language-dropdown">
-        <button class="language-btn"><div class="nav-item-icon">English <img class="nav-item-icon-img" src="images/header-nav-icon/Vector.png" alt=""></div></button>
-        <div class="language-menu">
-          <a href="#">English</a>
-          <a href="#">বাংলা</a>
-        </div>
-      </div>
+  <button class="language-btn" aria-expanded="false" aria-haspopup="true">
+    <div class="nav-item-icon">
+      English 
+      <img class="nav-item-icon-img" src="images/header-nav-icon/Vector.png" alt="dropdown arrow" />
+    </div>
+  </button>
+  <div class="language-menu" role="menu" aria-hidden="true">
+    <a href="#" role="menuitem">English</a>
+    <a href="#" role="menuitem">বাংলা</a>
+    <!-- Add more languages here -->
+  </div>
+</div>
+
       
       <button class="mobile-menu-toggle" aria-label="Toggle navigation">
           <span></span>
@@ -58,7 +65,6 @@
       </button>
 
   </div>
-</header>
 </header>
 
     
@@ -89,10 +95,7 @@
       </div>
     </div>
   </section>
-
-
-
-  <section class="Trusted-wrapper">
+   <section class="Trusted-wrapper">
     <div class="wrapper">
     <div class="img1">
       <img src="images/truested-images/top.svg" alt="Image 1">
@@ -143,28 +146,10 @@
 
   </section>
 
+ 
 
-<section class="partners-wrapper">
-    <div class="partners-content">
-        <div class="partners-text">
-            Supported by<br>Our Partners
-        </div>
-        <div class="vertical-divider"></div>
-        <div class="partners-carousel-container">
-            <div class="partners-logos" id="partnersCarousel">
-                <img src="images/partners-images/radison 1.svg" alt="Radisson Hotels Logo">
-                <img src="images/partners-images/the-first-collection 2.svg" alt="The First Collection Logo">
-                <img src="images/partners-images/holiday_inn 1.svg" alt="Holiday Inn Logo">
-                <img src="images/partners-images/sheraton 1.svg" alt="Sheraton Logo">
-                <img src="images/partners-images/the-first-collection 2.svg" alt="The First Collection Logo">
-            </div>
-        </div>
-        <div class="dot-container" id="carouselDots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-        </div>
-    </div>
-</section>
+
+
 
 
 
